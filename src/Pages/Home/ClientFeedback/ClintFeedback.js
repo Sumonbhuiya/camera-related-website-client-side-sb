@@ -3,7 +3,7 @@ import React from 'react';
 const ClintFeedback = () => {
     return (
         <div>
-            <h2>this is feedback section</h2>
+            <h2>this is client feedback section</h2>
         </div>
     );
 };
