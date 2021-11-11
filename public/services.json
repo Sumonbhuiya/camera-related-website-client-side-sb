@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "Box Camera",
+        "img": "https://i.ibb.co/6X5sp25/box-1.jpg",
+        "about": "Protection",
+        "describe": " Box Style camera is a standalone camera. The name is derived from the shape of the camera. unctions like any other camera. Can be used in Outdoor Environmental Housings or for Indoor mountings if aesthetics are not a concern.",
+        "benefits": "Allows for customization of the lens, camera and housing to fit the needs of the installation. Offers many lens options, including vari-focal and fixed.",
+        "price": 4500,
+        "rating": 4
+    },
+    {
+        "id": 2,
+        "name": "Dome Camera",
+        "img": "https://i.ibb.co/Nsqk3PN/dome-1.jpg",
+        "about": "Security",
+        "describe": "Dome camera is a combination of camera, lens, and ceiling mount packaged in a discreet dome shape. Functions like any other camera but comes in a dome-shaped housing. Is well-suited for environments that tend to get dirty, like kitchens and warehouses. Typically available in indoor or outdoor housings.",
+        "benefits": "Aesthetically pleasing / compact in appearance. Available in vandal-resistant housings.",
+        "price": 3500,
+        "rating": 4.5
+    },
+    {
+        "id": 3,
+        "name": "PTZ Camera",
+        "img": "https://i.ibb.co/6HfbFjJ/ptz-1.jpg",
+        "about": "Protection",
+        "describe": "PTZ camera contains mechanical controls that allow the operator to remotely pan, tilt, and zoom the camera. Pan, Tilt and Zoom features. Control movement via joystick or software. Can automatically run patterns or turn to a preset position.",
+        "benefits": "Focuses on areas of interest. Auto Track movement. Survey a wide area of interest and zoom in to detail.",
+        "price": 3700,
+        "rating": 4.5
+    },
+    {
+        "id": 4,
+        "name": "Bullet Camera",
+        "img": "https://i.ibb.co/wh8ybPY/bullet-1.jpg",
+        "about": "Security",
+        "describe": " A bullet camera is a combination of camera, lens, and housing packaged in a bullet-style body. Commonly includes IR illuminators. Sealed enclosure decreases need for servicing. Small footprint.",
+        "benefits": "Requires no separate housing or lens. Good for low-light situation.",
+        "price": 3300,
+        "rating": 5
+    },
+    {
+        "id": 5,
+        "name": "IP Camera",
+        "img": "https://i.ibb.co/tsXmYzV/ip-1.jpg",
+        "about": "Security",
+        "describe": "An IP camera transmits a digital signal using Internet Protocol over a network. Increased resolution and scalability. Many have built-in video analytic software.",
+        "benefits": "Better system management than analog cameras. Resolutions from VGA to 29 Meg",
+        "price": 4900,
+        "rating": 4
+    },
+    {
+        "id": 6,
+        "name": "Day/Night Camera",
+        "img": "https://i.ibb.co/xF1kwcv/day-night-1.jpg",
+        "about": "Protection",
+        "describe": " A day/night camera is a camera used indoor and outdoor for environments with low light conditions. IR filter that is lifted as lighting levels decrease.",
+        "benefits": "Handles both day and night-time lighting situations.",
+        "price": 5000,
+        "rating": 5
+    },
+    {
+        "id": 7,
+        "name": "Thermal Camera",
+        "img": "https://i.ibb.co/gt7PtwJ/thermal-1.jpg",
+        "about": "Protection",
+        "describe": "A thermal camera uses thermal imaging to produce surveillance footage in dark or harsh environments.  It uses heat to differentiate objects. Uses heat sensing to distinguish objects and people.",
+        "benefits": "Detect people and objects in smoke, haze, dust, light fog. Works in complete darkness.",
+        "price": 2500,
+        "rating": 4.5
+    },
+    {
+        "id": 8,
+        "name": "Wide Camera",
+        "img": "https://i.ibb.co/Nsqk3PN/dome-1.jpg",
+        "about": "Security",
+        "describe": " Wide Dynamic Cameras have the ability to balance light-levels on a pixel-by-pixel basis. Capable of handling a wide range of lighting levels in the same scene.",
+        "benefits": "Capture clear face shots when a people are entering with bright light behind them and with dark shadows on their faces. Used in areas with too much sunshine or where headlights are used, such as parking lots.",
+        "price": 4300,
+        "rating": 4.5
+    },
+    {
+        "id": 9,
+        "name": "Wireless Camera",
+        "img": "https://i.ibb.co/mhsHgLq/wireless-1.jpg",
+        "about": "Protection",
+        "describe": "Wireless IP security cameras offers ease of installation and eliminates the cost of network cabling when adding this camera to your video surveillance system.Wi-Fi enabled for easy installation and setup. Tilting and swivel options to maximize viewing.",
+        "benefits": "Motion detection for instant alerts of intruders. Crystal clear images, even in low light conditions.",
+        "price": 4800,
+        "rating": 4
+    },
+    {
+        "id": 10,
+        "name": "PTZ Camera",
+        "img": "https://i.ibb.co/xmRGpC6/ptz-2.jpg",
+        "about": "Protection",
+        "describe": "PTZ camera contains mechanical controls that allow the operator to remotely pan, tilt, and zoom the camera. Pan, Tilt and Zoom features. Control movement via joystick or software. Can automatically run patterns or turn to a preset position.",
+        "benefits": "Focuses on areas of interest. Auto Track movement. Survey a wide area of interest and zoom in to detail.",
+        "price": 4400,
+        "rating": 4.5
+    },
+    {
+        "id": 11,
+        "name": "Thermal Camera",
+        "img": "https://i.ibb.co/9wWhhGq/thermal-2.jpg",
+        "about": "Protection",
+        "describe": "A thermal camera uses thermal imaging to produce surveillance footage in dark or harsh environments.  It uses heat to differentiate objects. Uses heat sensing to distinguish objects and people.",
+        "benefits": "Detect people and objects in smoke, haze, dust, light fog. Works in complete darkness.",
+        "price": 5200,
+        "rating": 5
+    },
+    {
+        "id": 12,
+        "name": "Day/Night Camera",
+        "img": "https://i.ibb.co/F4S4WYL/day-night-2.jpg",
+        "about": "Protection",
+        "describe": " A day/night camera is a camera used indoor and outdoor for environments with low light conditions. IR filter that is lifted as lighting levels decrease.",
+        "benefits": "Handles both day and night-time lighting situations.",
+        "price": 3000,
+        "rating": 5
+    },
+    {
+        "id": 13,
+        "name": "Bullet Camera",
+        "img": "https://i.ibb.co/fxydvJj/bullet-2.jpg",
+        "about": "Security",
+        "describe": " A bullet camera is a combination of camera, lens, and housing packaged in a bullet-style body. Commonly includes IR illuminators. Sealed enclosure decreases need for servicing. Small footprint.",
+        "benefits": "Requires no separate housing or lens. Good for low-light situation.",
+        "price": 4200,
+        "rating": 4
+    },
+    {
+        "id": 14,
+        "name": "C-mount Camera",
+        "img": "https://i.ibb.co/NYBxkXD/c-mount-1.jpg",
+        "about": "Protection",
+        "describe": "Coming with detachable lenses, C-mount cameras allow for simple lens changes to fit different applications. C-mount cameras can cover distances beyond 40 ft thanks to the possibility to use special lenses with these cameras, whereas standard CCTV lenses can only cover distances of 35-40 ft.",
+        "benefits": "Can support changes in technology. Effective for indoor use. Bulky size makes them noticeable (which acts as a deterrent)",
+        "price": 4600,
+        "rating": 4.5
+    }
+]

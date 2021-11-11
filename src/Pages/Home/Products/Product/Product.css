@@ -1,0 +1,12 @@
+.card-hover:hover .change-background{
+    background-color: #f28500;
+    color:#ffffff
+}
+.card-hover:hover .image-transform{
+    transform: scale(1.05);
+    transition-duration: 1.5s;
+}
+.hover-grid:hover .hover-look{
+    transform: scale(1.02);
+    transition-duration: 1s;
+}
