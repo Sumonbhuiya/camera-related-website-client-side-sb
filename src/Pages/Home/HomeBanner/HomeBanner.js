@@ -7,9 +7,11 @@ const HomeBanner = () => {
         <Box sx={{ pt: 4, pb: 2 }}>
             <Container style={{ backgroundColor: '#f2f3f4' }}>
                 <Grid container spacing={2}>
+                    {/* banner image  */}
                     <Grid item xs={12} sm={5} md={6}>
                         <img style={{ width: '100%' }} src="https://i.ibb.co/D4tsQ0r/home-banner.png" alt="" />
                     </Grid>
+                    {/* banner right column design  */}
                     <Grid item xs={12} sm={7} md={6} sx={{ display: 'flex', alignItems: 'center', textAlign: 'start' }}>
                         <Box>
                             <img src="https://i.ibb.co/3Fr2Nwk/line-right.png" alt="" />

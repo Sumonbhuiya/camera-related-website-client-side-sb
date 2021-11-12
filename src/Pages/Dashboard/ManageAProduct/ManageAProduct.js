@@ -12,6 +12,7 @@ import { Button, Typography } from '@mui/material';
 const ManageAProduct = () => {
     const { token } = useAuth();
     const [products, setProducts] = useState([]);
+    // load all products 
     useEffect(() => {
         const url = `http://localhost:5000/products`
         fetch(url, {
@@ -23,7 +24,7 @@ const ManageAProduct = () => {
             .then(data => setProducts(data))
     }, [token])
 
-    // Delete a order from products
+    // Delete a product from products
     const handelDelete = id => {
         const permission = window.confirm('Are you sure you want to delete this order ???')
         if (permission) {
@@ -46,31 +47,34 @@ const ManageAProduct = () => {
                 Manage All Services
             </Typography>
             <TableContainer component={Paper}>
-                <Table aria-label="Appointments table">
-                    <TableHead>
+                <Table aria-label="ManageProduct table">
+                    {/* table header  */}
+                    <TableHead sx={{ backgroundColor: '#808080' }}>
                         <TableRow>
-                            <TableCell>Product Id</TableCell>
-                            <TableCell align="left">Name</TableCell>
-                            <TableCell align="left">About</TableCell>
-                            <TableCell align="left">Price</TableCell>
-                            <TableCell align="left">Rating</TableCell>
-                            <TableCell align="center">Action</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }}>Image</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="left">Product Id</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="left">Name</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="left">Price</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="left">Rating</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="center">Action</TableCell>
                         </TableRow>
                     </TableHead>
+                    {/* seeing products info in table body  */}
                     <TableBody>
                         {products.map((row) => (
                             <TableRow
+                                id="table-row"
                                 key={row._id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
-                                <TableCell component="th" scope="row">
-                                    {row._id}
+                                <TableCell component="th" scope="row" style={{ width: '15%' }}>
+                                    <img style={{ width: '40%' }} src={row.img} alt="" />
                                 </TableCell>
+                                <TableCell align="left">{row._id}</TableCell>
                                 <TableCell align="left">{row.name}</TableCell>
-                                <TableCell align="left">{row.about}</TableCell>
                                 <TableCell align="left">{row.price} Tk</TableCell>
                                 <TableCell align="left">{row.rating}</TableCell>
-                                <TableCell align="center"><Button variant="contained" onClick={() => handelDelete(row._id)}>Delete</Button></TableCell>
+                                <TableCell align="center"><Button sx={{ backgroundColor: '#ff4500', color: '#ffffff', px: 2 }} id="delete-button" onClick={() => handelDelete(row._id)}>Delete</Button></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

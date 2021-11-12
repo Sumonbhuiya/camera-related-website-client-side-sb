@@ -14,6 +14,7 @@ const Navigation = () => {
     const { user, logOut } = useAuth();
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
+    //For mobile responsive view
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
     const handleMobileMenuClose = () => {
         setMobileMoreAnchorEl(null);
@@ -40,6 +41,7 @@ const Navigation = () => {
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         >
+            {/* all menu sets here for mobile */}
             <NavLink to="/home" style={{ textDecoration: 'none' }}>
                 <Button sx={{ color: 'black', px: 5 }} color="inherit">home</Button>
             </NavLink><br />
@@ -79,6 +81,7 @@ const Navigation = () => {
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                        {/* all menu sets here for large device */}
                         <NavLink to="/home" style={{ textDecoration: 'none' }}>
                             <Button sx={{ color: 'white', mx: 1, fontSize: 16 }} color="inherit">Home</Button>
                         </NavLink>

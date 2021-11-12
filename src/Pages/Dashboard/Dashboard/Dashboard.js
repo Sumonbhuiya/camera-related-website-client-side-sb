@@ -38,6 +38,7 @@ const Dashboard = (props) => {
             style={{ backgroundColor: '#4169e1', height: '100%' }}>
             <Toolbar />
             <div>
+                {/* toolbar top list  */}
                 <List>
                     <NavLink to={`${url}`} style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
                         <span style={{ color: 'white', fontSize: '16px', marginRight: '18px' }}><i className="fas fa-braille"></i></span> Dashboard
@@ -70,6 +71,7 @@ const Dashboard = (props) => {
                     }
                 </List>
             </div>
+            {/* bottom list  */}
             <div style={{ position: 'absolute', bottom: 0, left: 0, paddingBottom: '10px' }}>
                 <List>
                     <NavLink to="/home" style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', marginTop: '30px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
@@ -146,6 +148,7 @@ const Dashboard = (props) => {
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <Toolbar />
+                {/* dashboard routs  */}
                 <Switch>
                     <Route exact path={path}>
                     </Route>

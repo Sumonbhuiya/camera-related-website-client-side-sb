@@ -7,6 +7,7 @@ const Product = (props) => {
     const { _id, about, name, img, describe, price } = props.product;
     return (
         <Grid item xs={4} sm={4} md={4}>
+            {/* card details of products  */}
             <Card className="card-hover" sx={{ minWidth: 275, borderRadius: 0 }} style={{ height: '100%' }}>
                 <CardMedia
                     className="image-transform"

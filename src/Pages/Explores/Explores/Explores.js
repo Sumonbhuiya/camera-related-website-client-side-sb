@@ -6,6 +6,7 @@ import Services from '../Services/Services';
 const Explores = () => {
     return (
         <div>
+            {/* call components */}
             <Navigation />
             <Services />
             <Footer />

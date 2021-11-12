@@ -2,7 +2,7 @@ import { Container, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
-
+// background images 
 const serviceBg = {
     width: '100%',
     height: '100%',
@@ -18,7 +18,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        // load data for seeing offer
+        // load data for seeing products
         fetch(`http://localhost:5000/products`)
             .then(res => res.json())
             .then(data => setProducts(data));
@@ -27,6 +27,7 @@ const Products = () => {
     return (
         <Box style={serviceBg} sx={{ flexGrow: 1 }}>
             <Container sx={{ py: 3 }}>
+                {/* header  */}
                 <Typography sx={{ fontWeight: 500, pb: 2, mt: 3 }} style={{ letterSpacing: '7px', color: '#ffffff' }} variant="h6" component="div">
                     THE BEST SERVICES
                 </Typography>
@@ -34,6 +35,7 @@ const Products = () => {
                     Services We’re Offering
                 </Typography>
                 <Grid container columns={{ xs: 4, sm: 8, md: 12 }}>
+                    {/* map products */}
                     {
                         homeProducts.map(product => <Product
                             key={product._id}

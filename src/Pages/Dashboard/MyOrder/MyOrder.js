@@ -12,6 +12,7 @@ import { Button, Typography } from '@mui/material';
 const MyOrder = () => {
     const { user, token } = useAuth();
     const [orders, setOrders] = useState([]);
+    // for user detection 
     useEffect(() => {
         const url = `http://localhost:5000/orders?email=${user.email}`
         fetch(url, {
@@ -47,31 +48,34 @@ const MyOrder = () => {
                 Your All Orders
             </Typography>
             <TableContainer component={Paper}>
-                <Table aria-label="Appointments table">
-                    <TableHead>
+                <Table aria-label="myOrder table">
+                    {/* table header  */}
+                    <TableHead sx={{ backgroundColor: '#808080' }}>
                         <TableRow>
-                            <TableCell>Order Id</TableCell>
-                            <TableCell align="left">Name</TableCell>
-                            <TableCell align="left">Address</TableCell>
-                            <TableCell align="left">Contact</TableCell>
-                            <TableCell align="left">Status</TableCell>
-                            <TableCell align="center">Action</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }}>Order Id</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="left">Order Date</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="left">Address</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="left">Contact</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="left">Status</TableCell>
+                            <TableCell sx={{ color: '#ffffff', fontSize: 16 }} align="center">Action</TableCell>
                         </TableRow>
                     </TableHead>
+                    {/* see details in table body  */}
                     <TableBody>
                         {orders.map((row) => (
                             <TableRow
+                                id="table-row"
                                 key={row._id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell component="th" scope="row">
                                     {row.orderId}
                                 </TableCell>
-                                <TableCell align="left">{row.name}</TableCell>
+                                <TableCell align="left">{row.createdAt}</TableCell>
                                 <TableCell align="left">{row.address}</TableCell>
                                 <TableCell align="left">{row.contact}</TableCell>
-                                <TableCell align="left">{row.status}</TableCell>
-                                <TableCell align="center"><Button variant="contained" onClick={() => handelCancel(row._id)}>Cancel</Button></TableCell>
+                                <TableCell align="left"><span style={{ backgroundColor: '#ffcf75', padding: '5%', fontSize: '16px' }}>{row.status}</span></TableCell>
+                                <TableCell align="center"><Button sx={{ backgroundColor: '#ff4500', color: '#ffffff', px: 2 }} id="delete-button" onClick={() => handelCancel(row._id)}>Cancel</Button></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

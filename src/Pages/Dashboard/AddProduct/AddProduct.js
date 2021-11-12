@@ -5,6 +5,7 @@ const AddProduct = () => {
     const [success, setSuccess] = useState(false);
     const [productData, setProductData] = useState({});
 
+    // take input values 
     const handelOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -39,6 +40,7 @@ const AddProduct = () => {
                     <Typography sx={{ fontWeight: 500, pb: 4, pt: 3 }} style={{ letterSpacing: '2px', color: '#d2691e' }} variant="h5" component="div">
                         Add A New Product
                     </Typography>
+                    {/* input filed for add product  */}
                     <form onSubmit={handelProductSubmit}>
                         <TextField
                             sx={{ width: "75%", m: 1 }}

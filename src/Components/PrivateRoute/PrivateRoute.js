@@ -3,6 +3,7 @@ import React from 'react';
 import { Redirect, Route } from 'react-router';
 import useAuth from '../../Hooks/UseAuth/UseAuth';
 
+// main page private route 
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useAuth()
     if (isLoading) { return <CircularProgress /> }

@@ -5,7 +5,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import ProductDetails from '../ProductDetails/ProductDetails';
 import useAuth from '../../../Hooks/UseAuth/UseAuth';
-
+import Footer from '../../Shared/Footer/Footer';
+import Navigation from '../../Shared/Navigation/Navigation';
+// set orders section background 
 const purchaseBg = {
     width: '100%',
     height: '100%',
@@ -20,9 +22,11 @@ const Purchase = () => {
     const [product, setProduct] = useState([]);
     const [success, setSuccess] = useState(false);
     const { user } = useAuth();
-    const initialInfo = { name: user.displayName, email: user.email, orderId: productId, status: 'pending' }
+    // set default value 
+    const initialInfo = { name: user.displayName, email: user.email, orderId: productId, status: 'Pending' }
     const [purchaseData, setPurchaseData] = useState(initialInfo);
 
+    // call api for found product
     useEffect(() => {
         fetch(`http://localhost:5000/products`)
             .then(res => res.json())
@@ -30,6 +34,7 @@ const Purchase = () => {
     }, [])
     const orderDetails = product.filter(service => (service._id === productId));
 
+    //for input field data
     const handelOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -42,6 +47,7 @@ const Purchase = () => {
         const givePurchase = {
             ...purchaseData
         }
+        // call api
         fetch(`http://localhost:5000/orders`, {
             method: 'POST',
             headers: {
@@ -61,9 +67,11 @@ const Purchase = () => {
 
     return (
         <>
+            <Navigation />
             <Box style={purchaseBg}>
                 <Container>
                     <Grid container>
+                        {/* purchase first column show */}
                         <Grid item sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} style={{ backgroundColor: 'rgb(138,121,93,.6)', margin: '2% 0' }} xs={12} md={7}>
                             <Grid container>
                                 <Grid item xs={12} md={6}>
@@ -76,7 +84,7 @@ const Purchase = () => {
                                                 <Typography sx={{ color: 'white' }} variant="h6" display="block" gutterBottom>Price: {service.price} Tk </Typography>
                                                 <Rating
                                                     name="text-feedback"
-                                                    value={service.rating}
+                                                    value={parseFloat(service.rating)}
                                                     readOnly
                                                     precision={0.5}
                                                     emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
@@ -86,10 +94,11 @@ const Purchase = () => {
                                     }
                                 </Grid>
                                 <Grid item xs={12} md={6}>
-                                    <Typography sx={{ pt: 3, color: 'white' }} variant="h4" display="block" gutterBottom><span style={{ fontFamily: 'Copperplate Gothic Light' }}>For Purchase <br />Your order <br /> Please Help us<br />to Give</span> <br /><span style={{ fontFamily: 'Impact', backgroundColor: 'rgb(133,109,77,.6)' }}>your Information</span> </Typography>
+                                    <Typography sx={{ pt: 6, color: 'white' }} variant="h4" display="block" gutterBottom><span style={{ fontFamily: 'Copperplate Gothic Light' }}>For Purchase <br />Your order <br /> Please Help us<br />to Give</span> <br /><span style={{ fontFamily: 'Impact', backgroundColor: 'rgb(133,109,77,.6)' }}>your Information</span> </Typography>
                                 </Grid>
                             </Grid>
                         </Grid>
+                        {/* purchase order  */}
                         <Grid item xs={12} md={5} style={{ padding: '2% 0' }}>
                             <Paper sx={{ py: 3 }}>
                                 <Typography sx={{ pb: 1 }} variant="h6" display="block" gutterBottom> Proceed Your Order </Typography>
@@ -151,7 +160,9 @@ const Purchase = () => {
                     </Grid>
                 </Container>
             </Box>
+            {/* add components */}
             <ProductDetails />
+            <Footer />
         </>
     );
 };

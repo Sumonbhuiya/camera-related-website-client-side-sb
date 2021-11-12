@@ -2,7 +2,7 @@ import { Container, Grid, Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+// set footer background image
 const footerImage = {
     width: '100%',
     height: '100%',
@@ -16,7 +16,8 @@ const Footer = () => {
     return (
         <Box style={footerImage}>
             <Container>
-                <Grid sx={{ py: 5, mt: 5 }} container spacing={2}>
+                <Grid sx={{ py: 5, mt: 0 }} container spacing={2}>
+                    {/* Footer first column */}
                     <Grid item sx={{ textAlign: 'left' }} xs={12} sm={6} md={3}>
                         <Typography sx={{ m: 1 }}>
                             <NavLink to=""> <img style={{ width: '220px', padding: '15px 0' }} src="https://i.ibb.co/sFjhgPD/logo-1.png" alt="" /></NavLink>
@@ -30,6 +31,7 @@ const Footer = () => {
                             < Link sx={{ py: 1, px: 1.2, borderRadius: '50%' }} style={{ color: '#000060', margin: '10px', backgroundColor: '#ffffff' }} href="https://twitter.com/Twitch"><i className="fab fa-twitter"></i></ Link>
                         </Typography>
                     </Grid>
+                    {/* Footer second column */}
                     <Grid item sx={{ textAlign: 'left' }} xs={12} sm={6} md={3}>
                         <Typography sx={{ m: 1, pb: 2, width: '50%', marginX: 'auto' }} style={{ fontFamily: 'Monaco', color: '#00ced1', fontWeight: 'bold' }} variant="h6" display="block" gutterBottom>
                             Useful info
@@ -50,6 +52,7 @@ const Footer = () => {
                             <i style={{ paddingRight: '10px' }} className="fas fa-check"></i> 24/7 Support
                         </Typography>
                     </Grid>
+                    {/* Footer third column */}
                     <Grid item sx={{ textAlign: 'left' }} xs={12} sm={6} md={3}>
                         <Typography sx={{ m: 1, pb: 2, width: '75%', marginX: 'auto' }} style={{ fontFamily: 'Monaco', color: '#00ced1', fontWeight: 'bold' }} variant="h6" display="block" gutterBottom>
                             Information / Links
@@ -76,6 +79,7 @@ const Footer = () => {
                             <NavLink to="" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Terms & conditions</NavLink>
                         </Typography>
                     </Grid>
+                    {/* Footer fourth column */}
                     <Grid item sx={{ textAlign: 'left' }} xs={12} sm={6} md={3}>
                         <Typography sx={{ m: 1, pl: 3 }} style={{ fontFamily: 'Monaco', color: '#00ced1', fontWeight: 'bold' }} variant="h6" display="block" gutterBottom>
                             Contact us

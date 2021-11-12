@@ -7,6 +7,7 @@ const ProductDetails = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState([]);
 
+    // for show mapping purpas
     useEffect(() => {
         fetch(`http://localhost:5000/products`)
             .then(res => res.json())
@@ -19,6 +20,7 @@ const ProductDetails = () => {
             <Typography sx={{ fontWeight: 700, mt: 3 }} style={{ fontFamily: 'Arial narrow', color: '#171717' }} variant="h4" component="div">
                 See Details About this Product
             </Typography>
+            {/* product details  */}
             <img style={{ marginTop: 0, paddingTop: 0, width: '15%', height: '2px' }} src="https://i.ibb.co/3Fr2Nwk/line-right.png" alt="" />
             <Grid container>
                 <Grid item sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} xs={12} md={7}>

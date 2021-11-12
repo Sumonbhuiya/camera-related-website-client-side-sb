@@ -5,9 +5,10 @@ import useAuth from '../../../Hooks/UseAuth/UseAuth';
 const GiveReview = () => {
     const [success, setSuccess] = useState(false);
     const { user } = useAuth();
-    const initialInfo = { userName: user.displayName }
+    const initialInfo = { name: user.displayName }
     const [feedback, setFeedback] = useState(initialInfo);
 
+    // take input value 
     const handelOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -41,6 +42,7 @@ const GiveReview = () => {
                 <Grid container>
                     <Grid item xs={12} md={8} style={{ padding: '2% 0' }}>
                         <Paper sx={{ py: 3 }}>
+                            {/* users review input field  */}
                             <Typography sx={{ pb: 1 }} variant="h6" display="block" gutterBottom> Give Your Opinion </Typography>
                             <form onSubmit={handelFeedbackSubmit}>
                                 <TextField
@@ -59,8 +61,17 @@ const GiveReview = () => {
                                     multiline
                                     rows={5}
                                     type="text"
-                                    name="city"
+                                    name="says"
                                     label="Your Comment"
+                                    onBlur={handelOnBlur}
+                                    variant="outlined"
+                                    required />
+                                <TextField
+                                    sx={{ width: "75%", m: 1 }}
+                                    id="outlined-basic"
+                                    type="text"
+                                    name="review"
+                                    label="Give Review"
                                     onBlur={handelOnBlur}
                                     variant="outlined"
                                     required />

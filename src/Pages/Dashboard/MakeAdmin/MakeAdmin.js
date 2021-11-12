@@ -11,6 +11,7 @@ const MakeAdmin = () => {
     const handelOnBlur = e => {
         setEmail(e.target.value)
     }
+    // check jwt token and admin status
     const handelAdminSubmit = e => {
         const user = { email };
         fetch(`http://localhost:5000/users/admin`, {
@@ -32,6 +33,7 @@ const MakeAdmin = () => {
     }
     return (
         <>
+            {/* admin input field  */}
             <Typography sx={{ pb: 2 }} variant="h5" display="block" gutterBottom> Make an Admin </Typography>
             <form onSubmit={handelAdminSubmit}>
                 <TextField
@@ -44,7 +46,7 @@ const MakeAdmin = () => {
                     required
                 />
                 <Box sx={{ width: '60%', mx: 'auto', display: 'flex', justifyContent: 'center', mt: 2 }}>
-                    <Button style={{ backgroundImage: 'linear-gradient(to right, #e08d3c 15%, #3CD3AD 120%)' }} type='submit' variant="contained">Make Admin</Button>
+                    <Button style={{ backgroundImage: 'linear-gradient(to right, #778899 15%, #a9a9a9 120%)' }} type='submit' variant="contained">Make Admin</Button>
                 </Box>
             </form>
             {

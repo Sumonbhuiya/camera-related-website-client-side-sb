@@ -10,6 +10,7 @@ const Service = (props) => {
     const { _id, about, name, img, describe, price, rating } = props.service;
     return (
         <Grid item xs={4} sm={4} md={4}>
+            {/* all products card is here */}
             <Card className="card-hover" sx={{ minWidth: 275, borderRadius: 0 }} style={{ height: '100%' }}>
                 <CardMedia
                     className="image-transform"
@@ -39,7 +40,7 @@ const Service = (props) => {
                             <Box >
                                 <Rating
                                     name="text-feedback"
-                                    value={rating}
+                                    value={parseFloat(rating)}
                                     readOnly
                                     precision={0.5}
                                     emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}

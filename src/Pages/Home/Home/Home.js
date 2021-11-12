@@ -9,6 +9,7 @@ import Products from '../Products/Products/Products';
 const Home = () => {
     return (
         <div>
+            {/* call all home page components */}
             <Navigation />
             <HomeTopBanner />
             <HomeBanner />
