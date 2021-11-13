@@ -75,13 +75,11 @@ const Navigation = () => {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar style={{ backgroundColor: '#4f86f7' }} position="static">
                 <Toolbar>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
+                    <NavLink
+                        to="/"
                     >
                         <img style={{ width: '220px', padding: '15px 0' }} src="https://i.ibb.co/sFjhgPD/logo-1.png" alt="" />
-                    </Typography>
+                    </NavLink>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {/* all menu sets here for large device */}
@@ -100,7 +98,7 @@ const Navigation = () => {
                                     <NavLink to="/dashboard" style={{ textDecoration: 'none' }}>
                                         <Button sx={{ color: 'white', mx: 1, fontSize: 16 }} color="inherit">Dashboard</Button>
                                     </NavLink>
-                                    <Typography style={{ color: '#954535', fontWeight: 'bold', paddingTop: '2.7%' }}>
+                                    <Typography style={{ color: '#954535', fontWeight: 'bold', paddingTop: '2.5%' }}>
                                         {user.displayName}
                                     </Typography>
                                     <NavLink to="" style={{ textDecoration: 'none' }}>

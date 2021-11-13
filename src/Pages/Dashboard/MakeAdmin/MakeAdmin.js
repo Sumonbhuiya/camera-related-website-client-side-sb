@@ -54,6 +54,16 @@ const MakeAdmin = () => {
                     <Typography style={{ textAlign: 'start' }} variant="caption" display="block" gutterBottom><Alert severity="success">Admin Added Successfully</Alert></Typography>
                 </Box>
             }
+            {/* Admin warning note */}
+            <Box>
+                <Typography sx={{ fontWeight: 500, mt: 8, color: '#f50000' }} variant="h5" component="div">
+                    [ Note: If you Want to Make an User Admin,<br />
+                    you Need to Verify that User First <i className="fas fa-exclamation-triangle"></i> ]
+                </Typography>
+                <Typography sx={{ color: '#f50000' }} variant="body2" component="div">
+                    [If He/She Accept Our Terms & Conditions, Then You Give Admin Permission]
+                </Typography>
+            </Box>
         </>
     );
 };

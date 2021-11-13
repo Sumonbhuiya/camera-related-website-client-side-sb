@@ -104,7 +104,7 @@ const ManageAllOrders = () => {
                                 {/* buttons */}
                                 {
                                     row.status === 'Shipping' ?
-                                        <TableCell align="center"><Button sx={{ backgroundColor: '#b0c4de', color: '#ffffff', px: 1.1 }} id="accept-button" onClick={() => handelShipped(row._id)}>{row.status}</Button></TableCell>
+                                        <TableCell align="center"><Button sx={{ backgroundColor: '#6495ed', color: '#ffffff', px: 1.1 }} style={{ pointerEvents: 'none' }} onClick={() => handelShipped(row._id)}>{row.status}</Button></TableCell>
                                         :
                                         <TableCell align="center"><Button sx={{ backgroundColor: '#ffa812', color: '#ffffff', px: 1.5 }} id="pending-button" onClick={() => handelShipped(row._id)}>{row.status}</Button></TableCell>
                                 }

@@ -5,8 +5,9 @@ const ContactUs = () => {
     return (
         <>
             <Container>
+                {/* simple text contact info design */}
                 <Typography sx={{ fontWeight: 500, p: 3, textAlign: 'left' }} style={{ letterSpacing: '3px', color: '#d2691e' }} variant="h4" component="div">
-                    NEED AN HELP!
+                    NEED HELP!
                 </Typography>
                 <Grid sx={{ p: 5, my: 2, border: 1 }} container spacing={2}>
                     <Grid item id="contact-box" sx={{ textAlign: 'left', px: 4, borderRight: 1 }} xs={12} sm={6} md={3}>

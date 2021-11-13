@@ -20,6 +20,8 @@ import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 import ManageAProduct from '../ManageAProduct/ManageAProduct';
 import AddProduct from '../AddProduct/AddProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import AdminDashboardHome from '../AdminDashboardHome/AdminDashboardHome';
+import UserDashboardHome from '../UserDashboardHome/UserDashboardHome';
 
 const drawerWidth = 220;
 const Dashboard = (props) => {
@@ -153,8 +155,16 @@ const Dashboard = (props) => {
                 <Toolbar />
                 {/* dashboard routs  */}
                 <Switch>
-                    <Route exact path={path}>
-                    </Route>
+                    {
+                        admin ?
+                            <Route exact path={path}>
+                                <AdminDashboardHome />
+                            </Route>
+                            :
+                            <Route exact path={path}>
+                                <UserDashboardHome />
+                            </Route>
+                    }
                     <Route path={`${path}/my_order`}>
                         <MyOrder />
                     </Route>

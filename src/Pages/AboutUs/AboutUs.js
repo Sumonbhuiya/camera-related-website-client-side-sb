@@ -9,6 +9,7 @@ const AboutUs = () => {
     return (
         <>
             <Navigation />
+            {/* about header part */}
             <Grid container sx={{ py: 1 }} spacing={2}>
                 <Grid item xs={12} md={7}>
                     <img style={{ width: '100%' }} src="https://i.ibb.co/RYfz6Kv/about-us-page-cctv-outlet.jpg" alt="" />
@@ -27,6 +28,7 @@ const AboutUs = () => {
                     </Box>
                 </Grid>
             </Grid>
+            {/* import component */}
             <ContactUs />
             <Footer />
         </>

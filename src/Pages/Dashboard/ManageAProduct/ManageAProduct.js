@@ -44,7 +44,7 @@ const ManageAProduct = () => {
     return (
         <>
             <Typography sx={{ fontWeight: 500, pb: 4, pt: 3 }} style={{ letterSpacing: '3px', color: '#d2691e' }} variant="h5" component="div">
-                Manage All Services
+                Manage All Products
             </Typography>
             <TableContainer component={Paper}>
                 <Table aria-label="ManageProduct table">
