@@ -48,13 +48,16 @@ const Navigation = () => {
             <NavLink to="/explores" style={{ textDecoration: 'none' }}>
                 <Button sx={{ color: 'black', px: 5 }} color="inherit">Explore</Button>
             </NavLink><br />
+            <NavLink to="/about_us" style={{ textDecoration: 'none' }}>
+                <Button sx={{ color: 'black', px: 5 }} color="inherit">About Us</Button>
+            </NavLink><br />
             {
                 user?.email ?
                     <Box>
                         <NavLink to="/dashboard" style={{ textDecoration: 'none' }}>
                             <Button sx={{ color: 'black', px: 5 }} color="inherit">Dashboard</Button>
                         </NavLink>
-                        <Typography sx={{ color: 'black', px: 5 }}>
+                        <Typography sx={{ color: '#954535', fontWeight: 'bold', px: 5 }}>
                             {user.displayName}
                         </Typography>
                         <NavLink to="" style={{ textDecoration: 'none' }}>
@@ -88,13 +91,16 @@ const Navigation = () => {
                         <NavLink to="/explores" style={{ textDecoration: 'none' }}>
                             <Button sx={{ color: 'white', mx: 1, fontSize: 16 }} color="inherit">Explore</Button>
                         </NavLink>
+                        <NavLink to="/about_us" style={{ textDecoration: 'none' }}>
+                            <Button sx={{ color: 'white', mx: 1, fontSize: 16 }} color="inherit">About Us</Button>
+                        </NavLink>
                         {
                             user?.email ?
                                 <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                                     <NavLink to="/dashboard" style={{ textDecoration: 'none' }}>
                                         <Button sx={{ color: 'white', mx: 1, fontSize: 16 }} color="inherit">Dashboard</Button>
                                     </NavLink>
-                                    <Typography style={{ color: '#f0f0f0', paddingTop: '2.5%' }}>
+                                    <Typography style={{ color: '#954535', fontWeight: 'bold', paddingTop: '2.7%' }}>
                                         {user.displayName}
                                     </Typography>
                                     <NavLink to="" style={{ textDecoration: 'none' }}>

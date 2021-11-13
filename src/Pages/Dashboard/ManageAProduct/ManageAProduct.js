@@ -14,7 +14,7 @@ const ManageAProduct = () => {
     const [products, setProducts] = useState([]);
     // load all products 
     useEffect(() => {
-        const url = `http://localhost:5000/products`
+        const url = `https://desolate-bayou-54204.herokuapp.com/products`
         fetch(url, {
             headers: {
                 'authorization': `Bearer ${token}`
@@ -28,7 +28,7 @@ const ManageAProduct = () => {
     const handelDelete = id => {
         const permission = window.confirm('Are you sure you want to delete this order ???')
         if (permission) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://desolate-bayou-54204.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

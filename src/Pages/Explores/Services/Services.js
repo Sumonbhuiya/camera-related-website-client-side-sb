@@ -17,7 +17,7 @@ const Services = () => {
 
     useEffect(() => {
         // load data for seeing products
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://desolate-bayou-54204.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

@@ -93,7 +93,7 @@ const useFirebase = () => {
 
     // check admin user 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://desolate-bayou-54204.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -113,7 +113,7 @@ const useFirebase = () => {
     //send registration data to database
     const saveUser = (displayName, email, intMethod) => {
         const user = { displayName, email };
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://desolate-bayou-54204.herokuapp.com/users`, {
             method: intMethod,
             headers: {
                 'content-type': 'application/json'

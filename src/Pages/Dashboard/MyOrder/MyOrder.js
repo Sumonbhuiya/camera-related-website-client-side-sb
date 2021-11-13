@@ -14,7 +14,7 @@ const MyOrder = () => {
     const [orders, setOrders] = useState([]);
     // for user detection 
     useEffect(() => {
-        const url = `http://localhost:5000/orders?email=${user.email}`
+        const url = `https://desolate-bayou-54204.herokuapp.com/orders?email=${user.email}`
         fetch(url, {
             headers: {
                 'authorization': `Bearer ${token}`
@@ -28,7 +28,7 @@ const MyOrder = () => {
     const handelCancel = id => {
         const permission = window.confirm('Are you sure you want to cancel this order ???')
         if (permission) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://desolate-bayou-54204.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

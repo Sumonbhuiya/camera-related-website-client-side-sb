@@ -28,7 +28,7 @@ const Purchase = () => {
 
     // call api for found product
     useEffect(() => {
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://desolate-bayou-54204.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [])
@@ -48,7 +48,7 @@ const Purchase = () => {
             ...purchaseData
         }
         // call api
-        fetch(`http://localhost:5000/orders`, {
+        fetch(`https://desolate-bayou-54204.herokuapp.com/orders`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

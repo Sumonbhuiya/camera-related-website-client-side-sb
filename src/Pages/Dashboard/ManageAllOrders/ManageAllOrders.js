@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
     // load all orders 
     useEffect(() => {
-        const url = `http://localhost:5000/all_orders`
+        const url = `https://desolate-bayou-54204.herokuapp.com/all_orders`
         fetch(url, {
             // jwt token 
             headers: {
@@ -30,7 +30,7 @@ const ManageAllOrders = () => {
     const handelShipped = id => {
         const permission = window.confirm('You want to accept this order???')
         if (permission) {
-            const url = `http://localhost:5000/all_orders/${id}`;
+            const url = `https://desolate-bayou-54204.herokuapp.com/all_orders/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -41,7 +41,7 @@ const ManageAllOrders = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.modifiedCount > 0) {
-                        fetch(`http://localhost:5000/all_orders`)
+                        fetch(`https://desolate-bayou-54204.herokuapp.com/all_orders`)
                             .then(res => res.json())
                             .then(data => setOrders(data))
                     }
@@ -53,7 +53,7 @@ const ManageAllOrders = () => {
     const handelDelete = id => {
         const permission = window.confirm('Are you sure you want to delete this order ???')
         if (permission) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://desolate-bayou-54204.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

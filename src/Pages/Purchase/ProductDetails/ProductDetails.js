@@ -9,7 +9,7 @@ const ProductDetails = () => {
 
     // for show mapping purpas
     useEffect(() => {
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://desolate-bayou-54204.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [])

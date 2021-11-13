@@ -14,7 +14,7 @@ const MakeAdmin = () => {
     // check jwt token and admin status
     const handelAdminSubmit = e => {
         const user = { email };
-        fetch(`http://localhost:5000/users/admin`, {
+        fetch(`https://desolate-bayou-54204.herokuapp.com/users/admin`, {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,

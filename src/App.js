@@ -9,6 +9,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Purchase from './Pages/Purchase/Purchase/Purchase';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import NotFound from './Pages/NotFound/NotFound';
+import AboutUs from './Pages/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
+            <Route path="/about_us">
+              <AboutUs />
+            </Route>
             <Route exact path="*">
               <NotFound />
             </Route>

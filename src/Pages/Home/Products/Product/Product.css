@@ -8,6 +8,15 @@
     transition-duration: 1.5s;
 }
 .hover-grid:hover .hover-look{
-    transform: scale(1.02);
+    transform: scaleX(1.08);
     transition-duration: 1s;
+}
+/* our policy design  */
+#box-style:hover{
+    transform: scale(1.04);
+}
+/* contact us design  */
+#contact-box:hover #icon-transform{
+    transform: rotate(360deg);
+    transition-duration: .8s;
 }

@@ -40,34 +40,37 @@ const Dashboard = (props) => {
             <div>
                 {/* toolbar top list  */}
                 <List>
-                    <NavLink to={`${url}`} style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
+                    <NavLink to={`${url}`} id="drawer-navlink" style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
                         <span style={{ color: 'white', fontSize: '16px', marginRight: '18px' }}><i className="fas fa-braille"></i></span> Dashboard
                     </NavLink>
-                    <NavLink to={`${url}/my_order`} style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
-                        <span style={{ color: 'white', fontSize: '18px', marginRight: '18px' }}><i className="fas fa-shopping-cart"></i></span> My Orders
-                    </NavLink>
-                    <NavLink to={`${url}/payment`} style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
-                        <span style={{ color: 'white', fontSize: '18px', marginRight: '18px' }}><i className="far fa-credit-card"></i></span> Payment
-                    </NavLink>
-                    <NavLink to={`${url}/review`} style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
-                        <span style={{ color: 'white', fontSize: '20px', marginRight: '18px' }}><i className="fas fa-comment-medical"></i></span> Review
-                    </NavLink>
                     {
-                        admin &&
-                        <Box>
-                            <NavLink to={`${url}/manage_all_orders`} style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
-                                <span style={{ color: 'white', fontSize: '17px', marginRight: '16px' }}><i className="fas fa-luggage-cart"></i></span> Manage Orders
-                            </NavLink>
-                            <NavLink to={`${url}/manage_product`} style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
-                                <span style={{ color: 'white', fontSize: '19px', marginRight: '18px' }}><i className="fas fa-tasks"></i></span> Manage Products
-                            </NavLink>
-                            <NavLink to={`${url}/add_product`} style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
-                                <span style={{ color: 'white', fontSize: '20px', marginRight: '18px' }}><i className="fas fa-folder-plus"></i></span> Add Product
-                            </NavLink>
-                            <NavLink to={`${url}/make_admin`} style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
-                                <span style={{ color: 'white', fontSize: '18px', marginRight: '16px' }}><i className="fas fa-user-plus"></i></span> Make Admin
-                            </NavLink>
-                        </Box>
+                        admin ?
+                            <Box>
+                                <NavLink to={`${url}/manage_all_orders`} id="drawer-navlink" style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
+                                    <span style={{ color: 'white', fontSize: '17px', marginRight: '16px' }}><i className="fas fa-luggage-cart"></i></span> Manage Orders
+                                </NavLink>
+                                <NavLink to={`${url}/manage_product`} id="drawer-navlink" style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
+                                    <span style={{ color: 'white', fontSize: '19px', marginRight: '18px' }}><i className="fas fa-tasks"></i></span> Manage Products
+                                </NavLink>
+                                <NavLink to={`${url}/add_product`} id="drawer-navlink" style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
+                                    <span style={{ color: 'white', fontSize: '20px', marginRight: '18px' }}><i className="fas fa-folder-plus"></i></span> Add Product
+                                </NavLink>
+                                <NavLink to={`${url}/make_admin`} id="drawer-navlink" style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
+                                    <span style={{ color: 'white', fontSize: '18px', marginRight: '16px' }}><i className="fas fa-user-plus"></i></span> Make Admin
+                                </NavLink>
+                            </Box>
+                            :
+                            <Box>
+                                <NavLink to={`${url}/my_order`} id="drawer-navlink" style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
+                                    <span style={{ color: 'white', fontSize: '18px', marginRight: '18px' }}><i className="fas fa-shopping-cart"></i></span> My Orders
+                                </NavLink>
+                                <NavLink to={`${url}/payment`} id="drawer-navlink" style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
+                                    <span style={{ color: 'white', fontSize: '18px', marginRight: '18px' }}><i className="far fa-credit-card"></i></span> Payment
+                                </NavLink>
+                                <NavLink to={`${url}/review`} id="drawer-navlink" style={{ textDecoration: 'none', color: 'white', padding: '15px, 15px', marginBottom: '12px', textAlign: 'left', paddingLeft: '20px', display: 'block' }}>
+                                    <span style={{ color: 'white', fontSize: '20px', marginRight: '18px' }}><i className="fas fa-comment-medical"></i></span> Review
+                                </NavLink>
+                            </Box>
                     }
                 </List>
             </div>
