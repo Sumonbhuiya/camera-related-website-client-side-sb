@@ -119,7 +119,10 @@ const AddProduct = () => {
                         </Paper>
                     </Grid>
                     <Grid item xs={12} md={4}>
-
+                        <Typography sx={{ mt: 8, px: 4, color: '#ff4242' }} style={{ fontFamily: 'Arial Rounded MT Bold' }} variant="h5" component="div">
+                            [ When You Want to Add a Product, Then Your Added Picture Quality Must be Good And Picture Can be Hosted.<br /><br />
+                            Product Information Can be Valuable And Added Some Extra Features. ]
+                        </Typography>
                     </Grid>
                 </Grid>
             </Container>

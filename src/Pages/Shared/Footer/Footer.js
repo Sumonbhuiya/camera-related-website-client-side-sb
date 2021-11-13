@@ -20,7 +20,7 @@ const Footer = () => {
                     {/* Footer first column */}
                     <Grid item sx={{ textAlign: 'left' }} xs={12} sm={6} md={3}>
                         <Typography sx={{ m: 1 }}>
-                            <NavLink to=""> <img style={{ width: '220px', padding: '15px 0' }} src="https://i.ibb.co/sFjhgPD/logo-1.png" alt="" /></NavLink>
+                            <NavLink to="/"> <img style={{ width: '220px', padding: '15px 0' }} src="https://i.ibb.co/sFjhgPD/logo-1.png" alt="" /></NavLink>
                         </Typography>
                         <Typography style={{ fontFamily: 'Monaco', color: '#f0f0f0' }}>
                             Security as a topic has continued to rise in popularity in the recent couple of years, and it comes as a no surprise. <br /> <br /> Security and privacy are two sides of the same coin.
@@ -58,22 +58,22 @@ const Footer = () => {
                             Information / Links
                         </Typography>
                         <Typography sx={{ m: 1, marginX: 'auto' }} style={{ width: '60%' }}>
-                            <NavLink to="" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}> <i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Home</NavLink>
+                            <NavLink to="/home" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}> <i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Home</NavLink>
                         </Typography>
                         <Typography sx={{ m: 1, marginX: 'auto' }} style={{ width: '60%' }}>
-                            <NavLink to="" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Services</NavLink>
+                            <NavLink to="/explores" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Explore</NavLink>
                         </Typography>
                         <Typography sx={{ m: 1, marginX: 'auto' }} style={{ width: '60%' }}>
                             <NavLink to="" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Partners</NavLink>
                         </Typography>
                         <Typography sx={{ m: 1, marginX: 'auto' }} style={{ width: '60%' }}>
-                            <NavLink to="" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Pricing</NavLink>
+                            <NavLink to="/about_us" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> About Us</NavLink>
                         </Typography>
                         <Typography sx={{ m: 1, marginX: 'auto' }} style={{ width: '60%' }}>
                             <NavLink to="" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> FAQ's</NavLink>
                         </Typography>
                         <Typography sx={{ m: 1, marginX: 'auto' }} style={{ width: '60%' }}>
-                            <NavLink to="" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Privacy</NavLink>
+                            <NavLink to="/dashboard" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Privacy</NavLink>
                         </Typography>
                         <Typography sx={{ m: 1, marginX: 'auto' }} style={{ width: '60%' }}>
                             <NavLink to="" style={{ textDecoration: 'none', fontFamily: 'Monaco', color: '#f0f0f0' }}><i style={{ paddingRight: '10px' }} className="fas fa-check"></i> Terms & conditions</NavLink>
