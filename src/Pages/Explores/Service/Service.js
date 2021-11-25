@@ -1,9 +1,12 @@
 import { Button, Card, CardContent, CardMedia, Grid, Rating, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import StarIcon from '@mui/icons-material/Star';
 import '../../Home/Products/Product/Product.css'
 import { Box } from '@mui/system';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 //set background image
 const cardBackground = {
     background: `url(https://i.ibb.co/mb2pdb8/card-bg.png)`,
@@ -15,8 +18,11 @@ const cardBackground = {
 
 const Service = (props) => {
     const { _id, about, name, img, describe, price, rating } = props.service;
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
     return (
-        <Grid item xs={4} sm={4} md={4}>
+        <Grid item data-aos="zoom-in" xs={4} sm={4} md={4}>
             {/* all products card is here */}
             <Card className="card-hover" sx={{ minWidth: 275, borderRadius: 0 }} style={{ height: '100%' }}>
                 <CardMedia
@@ -27,7 +33,7 @@ const Service = (props) => {
                     image={img}
                     alt="green iguana"
                 />
-                <Box style={cardBackground}>
+                <Box data-aos="zoom-in-up" style={cardBackground}>
                     <CardContent style={{ textAlign: 'start', marginTop: '-7%', marginLeft: '10%' }}>
                         <Typography className="change-background" sx={{ p: 1, borderRadius: 2, marginRight: '79%', backgroundColor: '#b0c4de' }} variant="body2" component="div">
                             <img style={{ width: '100%', height: '100%', margin: '0' }} src="https://i.ibb.co/K5fVV2N/cctv-15.png" alt="" />

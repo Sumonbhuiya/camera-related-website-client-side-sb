@@ -112,7 +112,7 @@ const Dashboard = (props) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h5" noWrap component="div">
-                        Dashboard
+                        DSC Dashboard
                     </Typography>
                 </Toolbar>
             </AppBar>

@@ -1,8 +1,13 @@
 import { Container, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const HomeBanner = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
     return (
         <Box sx={{ pt: 4, pb: 2 }}>
             <Container style={{ backgroundColor: '#f2f3f4' }}>
@@ -24,7 +29,7 @@ const HomeBanner = () => {
                             <Typography sx={{ fontStyle: 'italic', pb: 3 }} style={{ color: '#3d3d3d' }} variant="subtitle1" gutterBottom component="div">
                                 The professional approach to security. On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded.
                             </Typography>
-                            <Grid container spacing={2}>
+                            <Grid container data-aos="fade-up" spacing={2}>
                                 <Grid item xs={3} sm={3} md={2}>
                                     <Typography sx={{ py: 1.2, px: .5, borderRadius: '50%', boxShadow: 2, width: '50%', marginX: 'auto', textAlign: 'center' }} style={{ color: '#ff5c5c', backgroundColor: '#ffffff' }} variant="subtitle1">
                                         <i className="fas fa-check"></i>
@@ -40,7 +45,7 @@ const HomeBanner = () => {
                                     </Typography>
                                 </Grid>
                             </Grid>
-                            <Grid container sx={{ pt: 3 }} spacing={2}>
+                            <Grid container data-aos="fade-up" sx={{ pt: 3 }} spacing={2}>
                                 <Grid item xs={3} sm={3} md={2}>
                                     <Typography sx={{ py: 1.2, px: .5, borderRadius: '50%', boxShadow: 2, width: '50%', marginX: 'auto', textAlign: 'center' }} style={{ color: '#ff5c5c', backgroundColor: '#ffffff' }} variant="subtitle1">
                                         <i className="fas fa-check"></i>

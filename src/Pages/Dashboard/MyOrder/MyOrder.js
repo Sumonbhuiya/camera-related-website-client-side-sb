@@ -8,6 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import useAuth from '../../../Hooks/UseAuth/UseAuth';
 import { Button, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const MyOrder = () => {
     const { user, token } = useAuth();
@@ -75,7 +76,13 @@ const MyOrder = () => {
                                 <TableCell align="left">{row.address}</TableCell>
                                 <TableCell align="left">{row.contact}</TableCell>
                                 <TableCell align="left"><span style={{ backgroundColor: '#ffcf75', padding: '5%', fontSize: '16px' }}>{row.status}</span></TableCell>
-                                <TableCell align="center"><Button sx={{ backgroundColor: '#ff4500', color: '#ffffff', px: 2 }} id="delete-button" onClick={() => handelCancel(row._id)}>Cancel</Button></TableCell>
+                                <TableCell align="center">
+                                    <Button sx={{ backgroundColor: '#ff4500', color: '#ffffff', m: 1 }} id="delete-button" onClick={() => handelCancel(row._id)}>Cancel</Button>
+                                    {/* {row.payment ? 'Paid' :
+                                        <Link to='' style={{ textDecoration: 'none' }}>
+                                            <Button sx={{ backgroundColor: '#ff4500', color: '#ffffff' }} id="delete-button">Pay</Button>
+                                        </Link>} */}
+                                </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
